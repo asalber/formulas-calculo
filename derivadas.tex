@@ -1,0 +1,73 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+\section*{Derivadas}
+\small
+\tcbset{enhanced, colback=color1!10, colframe=color1, fonttitle=\bfseries\large\sffamily, %lifted shadow={1mm}{-2mm}{3mm}{0.1mm}
+}
+
+\centering
+\begin{tcolorbox}[hbox, title=Derivadas básicas]
+\begin{minipage}{0.7\textwidth}
+\[
+  \def\arraystretch{2.15}
+  \begin{array}{ccccc}
+  \multicolumn{2}{c}{\mbox{Funciones simples}} & &  \multicolumn{2}{c}{\mbox{Funciones compuestas}}\\
+  y            & y'                            & \qquad & y            & y'\\
+  \cmidrule(r){1-2}\cmidrule(l){4-5}
+  k            & 0\\
+  x            & 1\\ 
+  x^n          & nx^{n-1}                      & \qquad & u^n          & nu^{n-1}u'\\
+  \sqrt{x}     & \dfrac{1}{2\sqrt{x}}          & \qquad & \sqrt{u}     & \dfrac{u'}{2\sqrt{u}}\\
+  \sqrt[n]{x}  & \dfrac{1}{n\sqrt[n]{x^{n-1}}} & \qquad & \sqrt[n]{u}  & \dfrac{u'}{n\sqrt[n]{u^{n-1}}}\\
+  \dfrac{1}{x} & \dfrac{-1}{x^2}               & \qquad & \dfrac{1}{u} & \dfrac{-u'}{u^2}\\  
+  e^x          & e^x                           & \qquad & e^u          & e^u u'\\
+  a^x          & a^x\ln(a)                     & \qquad & a^u          & a^u\ln(a)u'\\
+  x^x          & xx^{x-1}+x^x\ln(x)            & \qquad & u^v          & vu^{v-1}u'+u^v\ln(u) v'\\
+  \ln(x)       & \dfrac{1}{x}                  & \qquad & \ln(u)       & \dfrac{u'}{u}\\
+  \log_a(x)    & \dfrac{1}{x}\log_a(e)         & \qquad & \log_a(u)    & \dfrac{u'}{u}\log_a(e)\\
+  \sen(x)      & \cos(x)                       & \qquad & \sen(u)      & \cos(u)u'\\
+  \cos(x)      & -\sen(x)                      & \qquad & \cos(u)      & -\sen(u)u'\\
+  \tg(x)       & \dfrac{1}{\cos(x)^2}          & \qquad & \tg(u)       & \dfrac{u'}{\cos(u)^2}\\
+  \cot(x)      & \dfrac{-1}{\sen(x)^2}         & \qquad & \cot(u)      & \dfrac{-u'}{\sen(u)^2}\\
+  \sec(x)      & \dfrac{\sen(x)}{\cos(x)^2}    & \qquad & \sec(u)      & \dfrac{\sen(u)}{\cos(u)^2}u'\\
+  \csc(x)      & \dfrac{-\cos(x)}{\sen(x)^2}   & \qquad & \csc(u)      & \dfrac{-\cos(x)}{\sen(x)^2}\\
+  \arcsen(x)   & \dfrac{1}{\sqrt{1-x^2}}       & \qquad & \arcsen(u)   & \dfrac{u'}{\sqrt{1-u^2}}\\
+  \arccos(x)   & \dfrac{-1}{\sqrt{1-x^2}}      & \qquad & \arccos(u)   & \dfrac{-u'}{\sqrt{1-u^2}}\\
+  \arctg(x)    & \dfrac{1}{1+x^2}              & \qquad & \arctg(u)    & \dfrac{u'}{1+u^2}\\
+  \arccot(x)   & \dfrac{-1}{1+x^2}             & \qquad & \arccot(u)   & \dfrac{-u'}{1+u^2}\\
+  \arcsec(x)   & \dfrac{1}{x\sqrt{x^2-1}}      & \qquad & \arcsec(u)   & \dfrac{u'}{u\sqrt{u^2-1}}\\
+  \arccsc(x)   & \dfrac{-1}{x\sqrt{x^2-1}}     & \qquad & \arccsc(u)   & \dfrac{-u'}{u\sqrt{u^2-1}}  
+\end{array}
+\]
+\end{minipage}
+\end{tcolorbox}
+
+\begin{tcolorbox}[hbox, title=Reglas de derivación]
+  \begin{minipage}{0.5\textwidth}
+    \begin{description}
+      \item[Suma]
+      \[
+        (f(x)+g(x))' = f'(x) + g'(x)
+      \]
+      \item[Diferencia]
+      \[
+        (f-g)'(x) = f'(x) - g'(x)
+      \]
+      \item[Producto]
+      \[
+        (fg)'(x) = f'(x)g(x) + f(x)g'(x)
+      \]
+      \item[Cociente]
+      \[
+        \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}
+      \]
+      \item[Regla de la cadena]
+      \[
+        (f(g))'(x) = f'(g(x))g'(x)
+      \]
+      \item[Inversa]
+      \[
+        (f^{-1})^\prime(x) = \frac{1}{f'(x)}
+      \]
+    \end{description}
+  \end{minipage}
+\end{tcolorbox}

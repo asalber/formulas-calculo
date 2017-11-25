@@ -1,0 +1,132 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+\section*{Integrales}
+\small
+\tcbset{enhanced, colback=color1!10, colframe=color1, fonttitle=\bfseries\large\sffamily, %lifted shadow={1mm}{-2mm}{3mm}{0.1mm}
+}
+
+\begin{multicols}{2}
+\begin{tcolorbox}[hbox, title=Primitivas básicas]
+\begin{minipage}{0.4\textwidth}
+\begin{description}
+  \item[Potencias]
+  \[
+    \int a\,dx=ax+C
+  \]
+  \[
+    \int x^n\,dx=\dfrac{x^{n+1}}{n+1}+C
+  \]
+  \item[Exponenciales]
+  \[
+    \int e^x\,dx=e^x+C.
+  \]
+  \[
+    \dint a^x\,dx=\dfrac{a^x}{\ln(a)}+C
+  \]
+  \item[Logarítmos]
+  \[
+    \int \dfrac{1}{x}\, dx=\ln|x|+C
+  \]
+  \item[Trigonométricas]
+  \[
+    \int \sen(x)\, dx=-\cos(x)+C
+  \]
+  \[
+    \int \cos(x)\, dx=\sen(x)+C
+  \]
+  \[
+    \int \frac{1}{\cos(x)^2}\, dx = \tg(x)+C
+  \]
+  \[
+    \int \tg(x)\, dx=\ln|\sec(x)|+C
+  \]
+  \[
+    \int \sec(x)\, dx = \ln|\sec(x) + \tg(x)|+C
+  \]
+  \[
+    \int \csc(x)\, dx= \ln|\csc(x)-\cot(x)|+C
+  \] 
+  \[
+    \int \cot(x) \, dx= \ln|\sen(x)|+C
+  \] 
+  \[
+    \int \sec(x)^2\, dx= \tg(x)+ C
+  \] 
+  \[
+    \int \csc(x)^2\, dx= -\cot(x)+ C
+  \] 
+  \[
+    \int \sec(x)\tg(x)\, dx= \sec(x)+ C
+  \] 
+  \[
+    \int \csc(x)\cot(x)\, dx = -\csc(x) +C
+  \]
+  \item[Racionales e irracionales]
+  \[
+    \int\frac{dx}{\sqrt{a^2-x^2}}=\arcsen\left(\frac{x}{a}\right)+C
+  \] 
+  \[
+    \int\frac{dx}{a^2+x^2}=\frac{1}{a}\arctg\left(\dfrac{x}{a}\right)+C
+  \] 
+  \[
+    \int\dfrac{dx}{x\sqrt{x^2-a^2}}=\frac{1}{a}\arcsec\left(\dfrac{x}{a}\right)+C
+  \] 
+  \[
+    \int\frac{dx}{a^2-x^2}=\frac{1}{2a}\ln\left|\frac{x+a}{x-a}\right|+C
+  \]
+\end{description}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{tcolorbox}[hbox, title=Reglas de integración]
+  \begin{minipage}{0.4\textwidth}
+    \begin{description}
+      \item[Suma]
+      \[
+        \int u+v\,dx = \int u\,dx + \int v\,dx
+      \]
+      \item[Diferencia]
+      \[
+        \int u-v\,dx = \int u\,dx - \int v\,dx
+      \]
+      \item[Producto por una constante]
+      \[
+        \int af(x)\,dx = a\int f(x)\,dx
+      \]
+      \item[Partes]
+      \[
+        \int u\,dv = uv - \int v\,du
+      \]
+      \item[Sustitución]
+      \[
+        \int f(u)u'\,dx = \int f(u)\,du
+      \]
+    \end{description}
+  \end{minipage}
+\end{tcolorbox}
+
+\begin{tcolorbox}[hbox, title=Integrales definidas]
+  \begin{minipage}{0.4\textwidth}
+    \begin{description}
+      \item[Regla de Barrow]
+      \[
+        \int_a^b f(x)\,dx = F(b)-F(a)
+      \]
+      donde $F(x) = \int f(x)\,dx$
+      \begin{center}
+      \input{img/area-funcion-positiva}
+      \end{center}
+      \item[Propiedades]
+      \[
+        \int_a^a f(x)\,dx = 0
+      \]
+      \[
+        \int_a^b f(x)\,dx = -\int_b^a f(x)\,dx
+      \]
+      \[
+        \int_a^b f(x)\, dx = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx
+      \]
+      donde $a<c<b$.
+    \end{description}
+  \end{minipage}
+\end{tcolorbox}
+\end{multicols}

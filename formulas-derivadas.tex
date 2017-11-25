@@ -1,0 +1,60 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+% !TEX program = xelatex
+\documentclass[a4paper, 10pt]{article}
+\usepackage[top=2.5cm, bottom=2.3cm, left=2cm, right=2cm, headsep=1cm]{geometry}
+%\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage[sfdefault,semibold,Light]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[pdfauthor={Alfredo Sánchez Alberca}, pdftitle={Statistical formulas}, colorlinks=true]{hyperref}
+
+% COLORS
+\usepackage{xcolor}
+\definecolor{color1}{RGB}{5,161,230} % Blue
+\definecolor{color2}{RGB}{238,50,36} % Red
+\definecolor{color3}{RGB}{0,205,0} % Green
+\definecolor{color4}{RGB}{243,102,25} % Orange
+
+% Lists
+\usepackage[shortlabels]{enumitem} % Customize lists
+%\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
+\setlist[description]{style=sameline,leftmargin=0cm}
+
+% Tables
+\usepackage{booktabs}
+
+% Sections
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{color1}\normalfont\Huge\bfseries}
+{\color{color1}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{color1}\normalfont\Large\bfseries}
+{\color{color1}\thesubsection}{1em}{}
+
+\rhead{\url{http://aprendeconalf.es}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\setlength{\columnsep}{1cm}
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+
+
+\begin{document}
+\include{derivadas}
+\end{document}
