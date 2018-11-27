@@ -3,11 +3,12 @@
 \documentclass[a4paper, 10pt]{article}
 \usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm, headsep=1cm]{geometry}
 \usepackage{amsmath}
-\usepackage{mathspec}
-\usepackage[sfdefault,semibold,Light]{FiraSans}
+%\usepackage{mathspec}
+\usepackage[sfdefault, semibold, light]{FiraSans}
 \usepackage{newtxsf}
 \usepackage{multicol}
 \usepackage{tikz}
+\usetikzlibrary{angles,quotes}
 \usepackage{graphicx}
 \usepackage[most]{tcolorbox}
 \usepackage[pdfauthor={Alfredo Sánchez Alberca}, pdftitle={Statistical formulas}, colorlinks=true]{hyperref}
@@ -41,7 +42,12 @@
 {\color{color1}\normalfont\Large\bfseries}
 {\color{color1}\thesubsection}{1em}{}
 
+% DEFINITIONS
 \setlength{\columnsep}{1cm}
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\tg}{\operatorname{tg}}
+\newcommand{\cosec}{\operatorname{cosec}}
+\newcommand{\ctg}{\operatorname{ctg}}
 
 \begin{document}
 \include{calculo-formulas}
